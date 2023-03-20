@@ -1,13 +1,22 @@
 
 import express, { json } from "express";
 import {db, connectToDB } from './db.js';
-
+import fs from 'fs';
+import path from 'path';
 
 const app = express();
 app.use(json());
 
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+app.use(express.static(path.join(__dirname, '../build')));
 
-app.post("/auth/signup", async (req, res) => {
+app.get(/^(?!\/api).+/, (req, res) => {
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+})
+
+app.post("api/auth/signup", async (req, res) => {
 	  const { username, email, password } = req.body; 
 	  const details = await db.collection('users').insertOne({
         name: username,
@@ -22,7 +31,7 @@ app.post("/auth/signup", async (req, res) => {
 
 
 });
-app.post("/auth/login", async (req, res) => {
+app.post("api/auth/login", async (req, res) => {
 	const { username, password } = req.body; 
 	const details = await db.collection('users').findOne({
 	  name: username,
@@ -35,7 +44,7 @@ app.post("/auth/login", async (req, res) => {
   res.json(details);
 });
 
-app.post("/ask/:prompt", async (req, res) => {
+app.post("api/ask/:prompt", async (req, res) => {
 const openai = new OpenAIApi(config);
 
 	const prompt = req.params.prompt;
