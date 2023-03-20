@@ -7,6 +7,8 @@ import path from 'path';
 const app = express();
 app.use(json());
 
+const PORT = process.env.PORT || 8000;
+
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -65,7 +67,7 @@ const openai = new OpenAIApi(config);
 });
 
 connectToDB ( () => {
-    app.listen(5000, () => {
+    app.listen(PORT, () => {
       console.log('Example app listening on port 8000!');
     });
   });
