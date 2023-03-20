@@ -1,0 +1,182 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color:#352f5b ;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(20px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700&display=swap');
+
+body{
+    background: #352f5b;
+    font-family: 'Open Sans', sans-serif;
+
+}
+h1{
+    font-weight: 700;
+}
+.container{
+    max-width: 400px;
+}
+
+input[type=text],
+input[type=text]:focus{
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+input[type=password],
+input[type=password ]:focus{
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.space{
+    margin-top: 10px;
+}
+
+.todos li{
+    background: #423a6f;
+    margin-bottom: 5px;
+}
+
+.filtered{
+    display: none !important;
+}
+.delete{
+    cursor: pointer;
+}
+.strike {
+    text-decoration: line-through;
+ }
+ .todo {
+    cursor: pointer;
+  }
+.left{
+  margin-right: 10px;
+}
+.right{
+  margin-left: 10px;
+}
+.navbar {
+ 
+  padding: 0 0 0 0;
+  overflow: hidden ;
+  position: fixed;
+  bottom: 60px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  
+}
+.header{
+  padding: 50px;
+  text-align: center;
+
+
+}
+.info{
+  padding: 60px;
+  position: fixed;
+  bottom: 100px;
+  width: 100%;
+}
+.information{
+  position: relative;
+  padding: 20px;
+  bottom: 0px;
+  width: 100%;
+}
+.micoff{
+  position: relative;
+  margin: 0 auto;
+  padding: 20px;
+  bottom: 0px;
+  width: 100%;
+}
+.decode{
+  position: relative;
+}
+.query{
+  padding: 20px;
+  position: fixed;
+  bottom: 100px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.nav-footer {
+  text-align: center;
+  color: #e9967a;
+  padding: 20px;
+  position: fixed;
+  bottom: 10px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+}
+a{
+  color: #e9967a;
+}
+.nav-footer a:hover{
+  color: #cf552d;
+}
+@media only screen and (max-width: 600px) {
+  input[type=text],
+input[type=text]:focus{
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    max-width: 55px;
+}
+
+input[type=password],
+input[type=password ]:focus{
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+}
