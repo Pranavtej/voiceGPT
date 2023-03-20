@@ -1,7 +1,7 @@
 
 import express, { json } from "express";
 import {db, connectToDB } from './db.js';
-import fs from 'fs';
+
 import path from 'path';
 
 const app = express();
