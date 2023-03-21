@@ -71,4 +71,4 @@ connectToDB ( () => {
     });
   });
 
-module.exports = app;
+
