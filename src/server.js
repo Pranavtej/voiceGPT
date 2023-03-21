@@ -31,7 +31,6 @@ app.post("api/auth/signup", async (req, res) => {
     }
     res.json(details);
 
-
 });
 app.post("api/auth/login", async (req, res) => {
 	const { username, password } = req.body; 
