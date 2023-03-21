@@ -45,6 +45,7 @@ app.post("api/auth/login", async (req, res) => {
   res.json(details);
 });
 
+
 app.post("api/ask/:prompt", async (req, res) => {
 const openai = new OpenAIApi(config);
 
